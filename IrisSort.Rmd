@@ -1,0 +1,11 @@
+---
+title: "Iris Sorter Documentation"
+author: "Graydyn Young"
+date: "May 14, 2015"
+output: html_document
+---
+
+
+To use this app, use the sliders on the left to input the sepal and petal measurements from an Iris.  The app will then output which varietal of Iris it believes you have.
+
+Please note that the initial load of the app can take a few seconds.  After that though, your results should be displayed immediately upon making changes to the sliders.
