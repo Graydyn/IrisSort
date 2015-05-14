@@ -1,9 +1,11 @@
 library(shiny)
 library(datasets)
 library(caret)
+library(e1071)
 shinyServer(function(input, output) {
   
-  model <- train(Species ~., data=iris)
+  #using rpart, not because it performs especially well, but because it works at shinyapps.io
+  model <- train(Species ~., data=iris, method="lda")
   
   output$dist <- renderText({ 
     
@@ -11,8 +13,11 @@ shinyServer(function(input, output) {
                      "Petal.Length"=input$slider3,"Petal.Width"=input$slider4,
                      "Species"=0)
     
+    prob <- predict(model, df, "prob")
     pred <- predict(model, df)
     
-    paste("This iris is a", pred)
+    paste("I am", toString(round(max(prob), digits = 4) * 100), "percent sure that this iris is a", pred)
   })
+  
+  
 })

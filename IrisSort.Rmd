@@ -5,7 +5,8 @@ date: "May 14, 2015"
 output: html_document
 ---
 
+This app is for identifying which species of Iris you have.  You will need to measure the Sepal Length, Sepal Width, Petal Length, and Petal Width of your Iris with a ruler.
 
-To use this app, use the sliders on the left to input the sepal and petal measurements from an Iris.  The app will then output which varietal of Iris it believes you have.
+To use the app, use the sliders on the left to input the sepal and petal measurements from an Iris.  The app will then output which varietal of Iris it believes you have, along with how certain it is.
 
 Please note that the initial load of the app can take a few seconds.  After that though, your results should be displayed immediately upon making changes to the sliders.
